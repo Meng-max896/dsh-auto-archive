@@ -1,0 +1,34 @@
+name: test
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: [22, 24]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node }}
+      - name: Core suite
+        run: node --test test/archive.test.js
+      - name: Feature suite
+        run: node --test test/features.test.js
+      - name: Syntax check
+        run: |
+          node --check src/plugin.js
+          node --check src/archive.js
+          node --check src/turn-tracker.js
+          node --check src/cleanup.js
+          node --check src/inactivity.js
+          node --check src/root-policy.js
+          node --check src/i18n.js
