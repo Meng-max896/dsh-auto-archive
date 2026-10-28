@@ -1,0 +1,17 @@
+# dsh-auto-archive — 工作区自动归档
+#
+# 安装（官方 CLI，一条命令挂载）：
+#   dsh plugin --profile web add dsh-auto-archive
+#
+# 也可以从本地目录安装（开发调试）：
+#   dsh plugin --profile web add <本目录绝对路径>
+#
+# 配置说明见 README.md。下面只写出需要覆盖默认值的键。
+- insert:
+    - id: auto-archive
+      name: dsh-auto-archive
+      config:
+        # 使用系统语言（zh-CN / en-US），也可显式指定
+        locale: auto
+        # 默认是否推送；false 时只做本地提交
+        push: true

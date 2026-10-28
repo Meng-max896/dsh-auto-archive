@@ -1,0 +1,62 @@
+{
+  "name": "dsh-auto-archive",
+  "version": "0.1.0",
+  "description": "DSH 自动归档插件：把工作区快照提交并推送到 git 远端。Snapshot any workspace into git and push — with dry-run, retry, and conflict-safe rebase.",
+  "type": "module",
+  "main": "src/plugin.js",
+  "exports": {
+    ".": "./src/plugin.js",
+    "./archive": "./src/archive.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "locale",
+    "scripts",
+    "cordis.patch.yml",
+    "icon.svg",
+    "README.md",
+    "README.en.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "engines": {
+      "dsh": ">=0.2.0-rc.2"
+    },
+    "compatibility": {
+      "dshReleases": {
+        "0.2.0-rc.2": "compatible"
+      }
+    }
+  },
+  "engines": {
+    "node": ">=22.15"
+  },
+  "scripts": {
+    "test": "node --test test/"
+  },
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "git",
+    "archive",
+    "backup",
+    "snapshot",
+    "automation"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/dsh-tools": "^0.2.0-rc.2",
+    "@deepseek-ai/schemastery": "^3.18.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Meng-max896/dsh-auto-archive.git"
+  },
+  "homepage": "https://github.com/Meng-max896/dsh-auto-archive#readme",
+  "icon": "./icon.svg"
+}

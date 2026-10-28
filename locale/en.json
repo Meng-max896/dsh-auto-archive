@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Auto Archive",
+    "description": "Archive workspace changes into git at the end of every conversation turn, report cache produced by the turn (never delete it), and archive sessions idle for a week."
+  }
+}
