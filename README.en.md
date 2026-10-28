@@ -15,10 +15,22 @@ Hard rules: **never force-push, never delete files, never store credentials, deg
 
 ## Install
 
+**From GitHub (currently recommended — npm is not published yet):**
+
 ```bash
-dsh plugin --profile web add dsh-auto-archive        # once published
-dsh plugin --profile web add ./dsh-auto-archive      # local checkout
+dsh plugin --profile web add https://github.com/Meng-max896/dsh-auto-archive
 ```
+
+**From a local checkout (development):**
+
+```bash
+git clone https://github.com/Meng-max896/dsh-auto-archive.git
+dsh plugin --profile web add ./dsh-auto-archive
+```
+
+**Manual download:** `Code → Download ZIP` on the repository page, unpack, then install with the second form above.
+
+> The npm package name `dsh-auto-archive` is ready (`npm pack` = 18 files / 29.9 kB) but not published; the first form becomes valid after `npm publish`.
 
 > Compatibility: DSH `>= 0.2.0-rc.2`
 

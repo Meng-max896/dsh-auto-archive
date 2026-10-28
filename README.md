@@ -15,10 +15,22 @@
 
 ## 安装
 
+**从 GitHub 安装（当前推荐 —— npm 尚未发布）：**
+
 ```bash
-dsh plugin --profile web add dsh-auto-archive        # 发布后
-dsh plugin --profile web add ./dsh-auto-archive      # 本地目录
+dsh plugin --profile web add https://github.com/Meng-max896/dsh-auto-archive
 ```
+
+**从本地目录安装（开发调试）：**
+
+```bash
+git clone https://github.com/Meng-max896/dsh-auto-archive.git
+dsh plugin --profile web add ./dsh-auto-archive
+```
+
+**手动下载：** 仓库页 `Code → Download ZIP`，解包后用上面第二种方式安装。
+
+> npm 包名 `dsh-auto-archive` 已就绪（`npm pack` 18 文件 / 29.9 kB），但尚未 `npm publish`；发布后第一种写法才成立。
 
 > 兼容性：DSH `>= 0.2.0-rc.2`
 
